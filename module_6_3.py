@@ -22,7 +22,7 @@ class Pegasus(Horse, Eagle):
         Eagle.__init__(self)
 
     def move(self, dx, dy):
-        # Используем методы родителей через super()
+
         self.run(dx)
         self.fly(dy)
 
@@ -30,14 +30,14 @@ class Pegasus(Horse, Eagle):
         return (self.x_distance, self.y_distance)
 
     def voice(self):
-        # Печатаем звук, унаследованный от Eagle
+
         print(self.sound)
 
 # Проверка работы
 p1 = Pegasus()
-print(p1.get_pos())  # Ожидаемый вывод: (0, 0)
+print(p1.get_pos())
 p1.move(10, 15)
-print(p1.get_pos())  # Ожидаемый вывод: (10, 15)
+print(p1.get_pos())
 p1.move(-5, 20)
-print(p1.get_pos())  # Ожидаемый вывод: (5, 35)
-p1.voice()  # Ожидаемый вывод: I train, eat, sleep, and repeat
+print(p1.get_pos())
+p1.voice()
